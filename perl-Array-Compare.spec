@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Array
-%define	pnam	Compare
+%define		pdir	Array
+%define		pnam	Compare
 Summary:	Array::Compare - Perl extension for comparing arrays
 Summary(pl):	Array::Compare - rozszerzenie Perla do porównywania tablic
 Name:		perl-Array-Compare
