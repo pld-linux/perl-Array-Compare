@@ -8,13 +8,13 @@
 Summary:	Array::Compare - Perl extension for comparing arrays
 Summary(pl):	Array::Compare - rozszerzenie Perla do porównywania tablic
 Name:		perl-Array-Compare
-Version:	1.09
+Version:	1.10
 Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7830f37c5c26ebd050262771290df734
+# Source0-md5:	4604bc5c717b098d2a2f6063a8a336a0
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Module-Build >= 0.20
