@@ -4,7 +4,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Array
 %define		pnam	Compare
-Summary:	Array::Compare perl module 
+Summary:	Array::Compare perl module
 Summary(cs):	Modul Array::Compare pro Perl
 Summary(da):	Perlmodul Array::Compare
 Summary(de):	Array::Compare Perl Modul
