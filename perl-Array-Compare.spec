@@ -5,27 +5,13 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Array
 %define		pnam	Compare
-Summary:	Array::Compare perl module
-Summary(cs):	Modul Array::Compare pro Perl
-Summary(da):	Perlmodul Array::Compare
-Summary(de):	Array::Compare Perl Modul
-Summary(es):	Módulo de Perl Array::Compare
-Summary(fr):	Module Perl Array::Compare
-Summary(it):	Modulo di Perl Array::Compare
-Summary(ja):	Array::Compare Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Array::Compare ÆÞ ¸ðÁÙ
-Summary(nb):	Perlmodul Array::Compare
-Summary(pl):	Modu³ perla Array::Compare
-Summary(pt_BR):	Módulo Perl Array::Compare
-Summary(pt):	Módulo de Perl Array::Compare
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Array::Compare
-Summary(sv):	Array::Compare Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Array::Compare
-Summary(zh_CN):	Array::Compare Perl Ä£¿é
+Summary:	Array::Compare - Perl extension for comparing arrays
+Summary(pl):	Array::Compare - rozszerzenie Perla do porównywania tablic
 Name:		perl-Array-Compare
 Version:	1.09
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7830f37c5c26ebd050262771290df734
@@ -36,7 +22,8 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Array::Compare is a Perl module which allows you to compare two arrays.
+Array::Compare is a Perl module which allows you to compare two
+arrays.
 
 %description -l pl
 Array::Compare jest rozszerzeniem Perla, umo¿liwiaj±cym porównywanie
