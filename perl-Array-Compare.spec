@@ -1,7 +1,7 @@
-
+#
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Array
 %define		pnam	Compare
@@ -22,12 +22,13 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Array::Compare is a Perl module which allows you to compare two
-arrays.
+If you have two arrays and you want to know if they are the same or
+different, then Array::Compare Perl module will be useful to you.
+
 
 %description -l pl
-Array::Compare jest rozszerzeniem Perla, umo¿liwiaj±cym porównywanie
-dwóch tablic.
+Modu³ Perla Array::Compare jest przeznaczony dla posiadaczy dwóch
+tablic, którzy chcieliby wiedzieæ czy s± one identyczne, czy ró¿ne.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
