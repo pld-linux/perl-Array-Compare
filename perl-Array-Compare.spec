@@ -1,4 +1,3 @@
-# $Revision: 1.2 $
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Array
 %define		pnam	Compare
