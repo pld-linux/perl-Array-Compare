@@ -1,26 +1,29 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Array
 %define		pnam	Compare
-Summary:	%{pdir}::%{pnam} perl module 
-Summary(cs):	Modul %{pdir}::%{pnam} pro Perl
-Summary(da):	Perlmodul %{pdir}::%{pnam}
-Summary(de):	%{pdir}::%{pnam} Perl Modul
-Summary(es):	Módulo de Perl %{pdir}::%{pnam}
-Summary(fr):	Module Perl %{pdir}::%{pnam}
-Summary(it):	Modulo di Perl %{pdir}::%{pnam}
-Summary(ja):	%{pdir}::%{pnam} Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	%{pdir}::%{pnam} ÆŞ ¸ğÁÙ
-Summary(no):	Perlmodul %{pdir}::%{pnam}
-Summary(pl):	Modu³ perla %{pdir}::%{pnam}
-Summary(pt_BR):	Módulo Perl %{pdir}::%{pnam}
-Summary(pt):	Módulo de Perl %{pdir}::%{pnam}
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl %{pdir}::%{pnam}
-Summary(sv):	%{pdir}::%{pnam} Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl %{pdir}::%{pnam}
-Summary(zh_CN):	%{pdir}::%{pnam} Perl Ä£¿é
+Summary:	Array::Compare perl module 
+Summary(cs):	Modul Array::Compare pro Perl
+Summary(da):	Perlmodul Array::Compare
+Summary(de):	Array::Compare Perl Modul
+Summary(es):	Módulo de Perl Array::Compare
+Summary(fr):	Module Perl Array::Compare
+Summary(it):	Modulo di Perl Array::Compare
+Summary(ja):	Array::Compare Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Array::Compare ÆŞ ¸ğÁÙ
+Summary(no):	Perlmodul Array::Compare
+Summary(pl):	Modu³ perla Array::Compare
+Summary(pt_BR):	Módulo Perl Array::Compare
+Summary(pt):	Módulo de Perl Array::Compare
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Array::Compare
+Summary(sv):	Array::Compare Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Array::Compare
+Summary(zh_CN):	Array::Compare Perl Ä£¿é
 Name:		perl-Array-Compare
 Version:	1.03
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -34,7 +37,7 @@ Array::Compare is a Perl module which allows you to compare two arrays.
 
 %description -l pl
 Array::Compare jest rozszerzeniem Perla, umo¿liwiaj±cym porównywanie
-dwóch tablic
+dwóch tablic.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -42,7 +45,8 @@ dwóch tablic
 %build
 perl Makefile.PL
 %{__make}
-#%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -57,7 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_sitelib}/Array/Compare.pm
-%dir %{perl_sitelib}/auto/Array
 %dir %{perl_sitelib}/auto/Array/Compare
 %{perl_sitelib}/auto/Array/Compare/*.ix
 %{_mandir}/man3/*.3pm.gz
