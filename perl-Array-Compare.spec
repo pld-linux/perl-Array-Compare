@@ -14,7 +14,7 @@ Summary(fr):	Module Perl Array::Compare
 Summary(it):	Modulo di Perl Array::Compare
 Summary(ja):	Array::Compare Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Array::Compare ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Array::Compare
+Summary(nb):	Perlmodul Array::Compare
 Summary(pl):	Modu³ perla Array::Compare
 Summary(pt_BR):	Módulo Perl Array::Compare
 Summary(pt):	Módulo de Perl Array::Compare
