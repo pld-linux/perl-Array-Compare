@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Array
 %define		pnam	Compare
@@ -27,8 +28,8 @@ Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,7 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -63,4 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitelib}/Array/Compare.pm
 %dir %{perl_sitelib}/auto/Array/Compare
 %{perl_sitelib}/auto/Array/Compare/*.ix
-%{_mandir}/man3/*.3pm.gz
+%{_mandir}/man3/*.3pm*
