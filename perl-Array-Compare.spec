@@ -1,7 +1,7 @@
-# $Revision: 1.1 $
+# $Revision: 1.2 $
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Array
-%define	pnam	Compare
+%define		pdir	Array
+%define		pnam	Compare
 Summary:	%{pdir}::%{pnam} perl module 
 Summary(cs):	Modul %{pdir}::%{pnam} pro Perl
 Summary(da):	Perlmodul %{pdir}::%{pnam}
@@ -19,9 +19,9 @@ Summary(ru):	Модуль для Perl %{pdir}::%{pnam}
 Summary(sv):	%{pdir}::%{pnam} Perlmodul
 Summary(uk):	Модуль для Perl %{pdir}::%{pnam}
 Summary(zh_CN):	%{pdir}::%{pnam} Perl дё©И
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Array-Compare
 Version:	1.03
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -57,7 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/%{pdir}/%{pnam}.pm
-%dir %{perl_sitelib}/auto/%{pdir}/%{pnam}
-%{perl_sitelib}/auto/%{pdir}/%{pnam}/*.ix
+%{perl_sitelib}/Array/Compare.pm
+%dir %{perl_sitelib}/auto/Array
+%dir %{perl_sitelib}/auto/Array/Compare
+%{perl_sitelib}/auto/Array/Compare/*.ix
 %{_mandir}/man3/*.3pm.gz
