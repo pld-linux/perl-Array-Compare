@@ -13,18 +13,18 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Array/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f03305894a1cadf51588d080f20fa748
+URL:		http://search.cpan.org/dist/Array-Compare/
+BuildRequires:	perl-Module-Build >= 0.20
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Module-Build >= 0.20
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 If you have two arrays and you want to know if they are the same or
 different, then Array::Compare Perl module will be useful to you.
-
 
 %description -l pl
 Modu³ Perla Array::Compare jest przeznaczony dla posiadaczy dwóch
