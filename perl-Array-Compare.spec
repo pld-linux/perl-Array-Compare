@@ -6,7 +6,7 @@
 %define		pdir	Array
 %define		pnam	Compare
 Summary:	Array::Compare - Perl extension for comparing arrays
-Summary(pl.UTF-8):   Array::Compare - rozszerzenie Perla do porównywania tablic
+Summary(pl.UTF-8):	Array::Compare - rozszerzenie Perla do porównywania tablic
 Name:		perl-Array-Compare
 Version:	1.13
 Release:	1
