@@ -19,6 +19,9 @@ URL:		http://search.cpan.org/dist/Array-Compare/
 BuildRequires:	perl-Module-Build >= 0.20
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-Moose
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Array/Compare.pm
-%{_mandir}/man3/*.3pm*
+%{_mandir}/man3/Array::Compare.3pm*
