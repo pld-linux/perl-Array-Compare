@@ -8,7 +8,7 @@ Summary:	Array::Compare - Perl extension for comparing arrays
 Summary(pl.UTF-8):	Array::Compare - rozszerzenie Perla do porównywania tablic
 Name:		perl-Array-Compare
 Version:	2.02
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
