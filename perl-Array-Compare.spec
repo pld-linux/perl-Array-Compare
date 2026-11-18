@@ -7,19 +7,20 @@
 Summary:	Array::Compare - Perl extension for comparing arrays
 Summary(pl.UTF-8):	Array::Compare - rozszerzenie Perla do porównywania tablic
 Name:		perl-Array-Compare
-Version:	2.02
-Release:	2
+Version:	3.0.8
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Array/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a1e5f3bc8a2dd4a27f65890a7c45dd05
+Source0:	https://www.cpan.org/modules/by-authors/id/D/DA/DAVECROSS/%{pdir}-%{pnam}-v%{version}.tar.gz
+# Source0-md5:	5050c871461f0fa370d583088a39fa3c
 URL:		http://search.cpan.org/dist/Array-Compare/
-BuildRequires:	perl-Module-Build >= 0.20
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-Module-Build >= 0.42
+BuildRequires:	perl-Moo
+BuildRequires:	perl-Type-Tiny
+BuildRequires:	perl-devel >= 1:5.10.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Moose
 BuildRequires:	perl-Test-NoWarnings
 %endif
 BuildArch:	noarch
@@ -34,7 +35,7 @@ Moduł Perla Array::Compare jest przeznaczony dla posiadaczy dwóch
 tablic, którzy chcieliby wiedzieć czy są one identyczne, czy różne.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}-v%{version}
 
 %build
 perl Build.PL \
